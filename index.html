@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Jogo da forca</title>
+    <script src="scripts/index.js" defer></script>
 </head>
-<body class="bg-secondary">
-  <main id="main" class="bg-light">
+<body>
+  
+  <div class="game-modal">
+    <div class="modal-content">
+      <h1>Você perdeu!</h1>
+      <button class="play-again">Jogar novamente</button>
+    </div>
+  </div>
+
+  <main class="screen">
     <section class="hangman-section">
       <img id="hangman-img" src="./images/hangman-0.svg" width="100%">
     </section>
@@ -15,18 +25,16 @@
       <ul class="secret-word-ul"></ul>
 
       <div class="hint-container">
-        <p>Dica: <strong id="hint-text"></strong></p>
+        <p>Dica: <strong class="hint-text"></strong></p>
         <p>Tentativas incorrentas: <strong><span id="guesses-text" class="text-danger">0/6</span></strong></p>
       </div>
 
-      <div class="keyboard-container"></div>
+      <div class="keyboard" id="keyboard"></div>
+      
+      </div>
     </aside>
 
   </main>
 
-  <script type="module" src="index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
 </body>
 </html>
